@@ -95,7 +95,7 @@ export default function LoginPage() {
 
       {/* LADO DIREITO - FORMULÁRIOS (sempre visível) */}
       <div className="w-full md:w-1/2 flex flex-col justify-center p-6 md:p-12 bg-white">
-        <div className="max-w-md w-full mx-auto">
+        <div className="max-w-md md:bg-[#FCE1D0] bg-white w-full mx-auto">
           {/* Logo pequena (apenas em mobile) */}
 <div className="md:hidden mb-6 flex justify-center">
   <Image
