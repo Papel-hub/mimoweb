@@ -6,67 +6,51 @@ import "./../styles/globals.css";
 // Fonte personalizada
 const circularStd = localFont({
   src: [
-    {
-      path: "../fonts/Circular-Std-Book.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Circular-Std-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
+    { path: "../fonts/Circular-Std-Book.ttf", weight: "400", style: "normal" },
+    { path: "../fonts/Circular-Std-Bold.ttf", weight: "700", style: "normal" },
   ],
   variable: "--font-circular",
   display: "swap",
   preload: true,
 });
 
-// Domínio principal (sem espaços!)
+// Domínio principal
 const siteUrl = "https://mimomeueseu.com";
 
 export const metadata: Metadata = {
-  title: "Mimo meu e seu | Transforme sua Carreira Farmacêutica",
-  description: "Descubra os segredos para alcançar o sucesso profissional com nossos produtos digitais exclusivos, criados por especialistas do mercado farmacêutico.",
+  title: "Mimo Meu e Seu | Listas e Cartões de Presente Personalizados",
+  description:
+    "Crie listas de presentes e cartões personalizados para surpreender quem você ama. Compartilhe carinho, memórias e momentos especiais de forma única.",
   authors: [{ name: "Marco Morais" }],
   keywords: [
-    "farmacêutico",
-    "consultoria farmacêutica",
-    "cursos para farmacêuticos",
-    "marketing digital para farmácias",
-    "planos de negócio",
-    "produtos digitais",
-    "Talento Store",
+    "presentes personalizados",
+    "listas de presentes",
+    "cartões de presente",
+    "romance",
+    "família",
+    "amizade",
+    "surpresas",
+    "mimos criativos",
   ],
   metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: "https://mimomeueseu.com", // URL principal
+    canonical: siteUrl,
   },
   openGraph: {
-    title: "Mimo meu e seu  | Produtos Digitais para Farmacêuticos",
+    title: "Mimo Meu e Seu | Presentes que criam memórias inesquecíveis",
     description:
-      "Transforme sua carreira com estratégias comprovadas. Cursos, e-books e consultorias exclusivas.",
+      "Transforme seus gestos de carinho em lembranças inesquecíveis. Crie, compartilhe e celebre com o Mimo Meu e Seu.",
     url: siteUrl,
-    siteName: "Mimo meu e seu ",
+    siteName: "Mimo Meu e Seu",
     locale: "pt_BR",
     type: "website",
-  // Atualize o `openGraph.images`
-    images: [
-  {
-    url: `${siteUrl}/api/og?title=Talento+Store&subtitle=Transforme+sua+carreira+farmacêutica`,
-    width: 1200,
-    height: 630,
-    alt: "Mimo meu e seu  - Transforme sua carreira",
-  },
-  ],
-   
   },
   robots: {
     index: true,
     follow: true,
   },
   verification: {
-    google: "SEU-CÓDIGO-DE-VERIFICAÇÃO", // Adicione se usar Google Search Console
+    google: "SEU-CODIGO-DE-VERIFICACAO", // Substitua pelo código real do Google Search Console
   },
 };
 
@@ -76,20 +60,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={circularStd.variable} suppressHydrationWarning>
+    <html
+      lang="pt-BR"
+      className={circularStd.variable}
+      suppressHydrationWarning
+    >
       <Head>
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#fff" />
-        {/* Coloque somente tags válidas aqui, sem texto/espacos extras */}
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+
       <body className="font-sans antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
-        <div className="relative z-10">
-       
-          {children} 
-      
-          </div>
-
-
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );
