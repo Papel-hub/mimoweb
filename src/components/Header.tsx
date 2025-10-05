@@ -93,7 +93,7 @@ export default function Header() {
                   height={35}
                   className="rounded-full"
                 />
-                <span className="text-sm font-medium px-1">Olá, Marco </span>
+                <span className="text-sm font-medium px-1">Olá, Nome </span>
               
 
               {isUserMenuOpen && (
