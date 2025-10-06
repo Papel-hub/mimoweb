@@ -1,0 +1,7 @@
+{
+  "/api/user/cartao/route": "app/api/user/cartao/route.js",
+  "/cartao/meu-cartao/page": "app/cartao/meu-cartao/page.js",
+  "/home/page": "app/home/page.js",
+  "/cestas/page": "app/cestas/page.js",
+  "/cartao/page": "app/cartao/page.js"
+}
