@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function LoginPage() {
-  const [currentView, setCurrentView] = useState("welcome"); // 'welcome', 'login', 'register'
+  const [currentView, setCurrentView] = useState("welcome"); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -94,8 +94,8 @@ export default function LoginPage() {
       </div>
 
       {/* LADO DIREITO - FORMULÁRIOS (sempre visível) */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center p-6 md:p-12 bg-white">
-        <div className="max-w-md md:bg-[#FCE1D0] bg-white w-full mx-auto">
+      <div className="w-full md:w-1/2 flex flex-col md:bg-white bg-[#FCE1D0] justify-center p-6 md:p-12">
+        <div className="max-w-md  w-full mx-auto">
           {/* Logo pequena (apenas em mobile) */}
 <div className="md:hidden mb-6 flex justify-center">
   <Image
@@ -108,12 +108,13 @@ export default function LoginPage() {
 </div>
           {currentView === "welcome" && (
             <div className="space-y-6">
-              <h1 className="text-2xl md:text-3xl  text-gray-900">
+              <h1 className="text-2xl  md:text-3xl  text-gray-900">
                 Bem-vindo ao
-              </h1>
-              <p className="text-2xl md:text-3xl  font-bold text-red-900">
+                <p className="text-2xl italic md:text-3xl  font-bold text-red-900">
                 Mimo meu e seu!
               </p>
+              </h1>
+              
               <p className="text-gray-600">
                 Crie listas e cartões de presente inesquecíveis para{" "}
                 <strong className="text-red-900">surpreender quem você ama!</strong>
@@ -121,13 +122,13 @@ export default function LoginPage() {
 
               <button
                 onClick={() => setCurrentView("login")}
-                className="mt-4 w-full bg-red-900 text-white font-medium py-3 px-4 rounded-full hover:bg-red-800 transition shadow-sm"
+                className="mt-4 w-full h-12 bg-red-900 text-white font-medium py-3 px-4 rounded-full hover:bg-red-800 transition shadow-sm"
               >
                 Entrar na sua conta
               </button>
               <button
                 onClick={() => setCurrentView("register")}
-                className="mt-2 w-full border border-red-900 text-red-900 font-medium py-3 px-4 rounded-full hover:bg-red-50 transition"
+                className="mt-2 w-full border border-red-900 text-red-900 font-medium py-2 px-4 rounded-full hover:bg-red-50 transition"
               >
                 Criar uma conta
               </button>

@@ -44,9 +44,9 @@ export default function Header() {
 
   const navLinks = [
     { href: '/home', label: 'Home' },
-    { href: '/datas', label: 'Datas' },
     { href: '/cestas', label: 'Cestas' },
-    { href: '/promocoes', label: 'Promoções' },
+    { href: '/cartao', label: 'Carão' },
+    { href: '/parceiros', label: 'Parceiros' },
   ];
 
   return (
@@ -55,7 +55,7 @@ export default function Header() {
         scrollY > 10 ? 'shadow-lg' : ''
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/home" className="flex-shrink-0">
